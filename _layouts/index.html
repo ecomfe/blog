@@ -1,5 +1,5 @@
 ---
-title: leeight's blog
+title: ecomfe's blog
 page_id: index
 ---
 {% include head.html %}
@@ -7,7 +7,7 @@ page_id: index
 <ol>
   {% for post in site.posts %}
     <li>
-      <a href="{{ post.url }}/">{{ post.title | escape_html }}</a>
+      <a href="/blog/{{ post.url }}/">{{ post.title | escape_html }}</a>
       <time>{{ post.date | date_to_string }}</time>
     </li>
   {% endfor %}

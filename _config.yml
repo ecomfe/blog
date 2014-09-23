@@ -7,7 +7,7 @@ lsi:      false
 safe:     false
 pygments: true
 markdown: redcarpet
-permalink: /blog/:year/:month/:title
+permalink: /:year/:month/:title
 paginate: 12
 paginate_path: "articles/page:num"
 encoding: utf-8
