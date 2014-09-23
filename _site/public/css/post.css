@@ -1,0 +1,50 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.post-body, .post-title, .post-comments {
+  width: 50em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post-comments {
+  margin-top: 10px;
+}
+
+.post-title h1 {
+  font-family: 'Oswald', serif;
+  font-size: 2em;
+  margin-top: 0.83em;
+  margin-bottom: 0px;
+  font-weight: bold;
+}
+
+.post-title time {
+  color: grey;
+  font-size: 10pt;
+}
+
+a {
+  color: #c00;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Oswald', serif;
+}
+
+code, pre {
+  font-family: 'Inconsolanta', monospace;
+}
+
+img.centered {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+

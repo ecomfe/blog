@@ -1,0 +1,82 @@
+<div class="page-footer">
+    <div class="foot-inner">
+    <dl>
+        <dt>友情链接</dt>
+        <dd>
+            <ul>
+                <li><a href="http://efe.baidu.com/" target="_blank">百度 EFE</a></li>
+                <li><a href="http://mweb.baidu.com/" target="_blank">百度 MWEB</a></li>
+                <li><a href="http://ued.taobao.org/blog/" target="_blank">淘宝 UED</a></li>
+                <li><a href="http://www.75team.com/" target="_blank">奇舞团</a></li>
+                <li><a href="http://www.w3ctech.com" target="_blank">w3ctech</a></li>
+                <li><a href="http://www.alloyteam.com/" target="_blank">腾讯 AlloyTeam</a></li>
+                <li><a href="http://isux.tencent.com/" target="_blank">腾讯 ISUX</a></li>
+                <li><a href="http://ued.ctrip.com/blog/?cat=11" target="_blank">携程 UED</a></li>
+            <ul>
+        </dd>
+    </dl>
+
+    <dl>
+        <dt>我们的项目</dt>
+        <dd>
+            <ul>
+                {% for project in site.data.projects %}
+                    <li><a {% if project.url %}href="{{project.url}}"{% else %}href="http://github.com/fex-team/{{project.github}}/"{% endif %} target="_blank">{{project.name}}</a></li>
+                {% endfor %}
+            <ul>
+        </dd>
+    </dl>
+
+    <dl>
+        <dt>加入我们</dt>
+        <dd>
+            <p>FEX 是百度「Web 前端研发部」的内部名称，其中 FE 是 Front End 的缩写，X 代表我们不仅关注前端技术，还更重视全端及全栈的能力。</p>
+
+            <p>如果你对这个团队感兴趣，可以<a href="/we-need-you/">【更多了解一下】</a>。</p>
+        </dd>
+    </dl>
+    </div>
+</div>
+
+<script type="text/javascript">
+//检查页面域名
+(function(){
+    var url = window.location.href;
+    if (url.indexOf('http://fex-team.github.io') !== -1) {
+        window.location.href = url.replace('http://fex-team.github.io','http://fex.baidu.com');
+    };
+})();
+</script>
+
+<script>
+    var page = "{{page.url}}";
+</script>
+<script type="text/javascript" src="/public/js/fex.alog.monk.js?t=201404171736"></script>
+
+
+<script type="text/javascript">
+    //设置站外链接新页面打开
+    var a_list= document.getElementsByTagName("a"); 
+    for(var i=0;i<a_list.length;i++){  
+        var href = a_list[i].href;
+        if( href && String(href).indexOf("fex.baidu.com") < 0 ){  
+            a_list[i].target = "_blank";
+        }  
+    } 
+</script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+    var domain = document.domain;
+    if(domain === "fex.baidu.com") {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?5cfaa6810a02b4f45dc2c55614d98f57";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    }
+})();
+</script>
+
+</body>
+</html>
