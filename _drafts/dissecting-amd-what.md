@@ -19,6 +19,8 @@
 
 应该可以很容易看出来，`AMD` 和 [CMD](https://github.com/cmdjs/specification/blob/master/draft/module.md) 是不兼容的，不能在一个页面共存。
 
+不是所有的 define 都是 `AMD`。那么，怎么知道页面中的 define 是不是 `AMD` 的呢？可以判断 [define.amd](https://github.com/amdjs/amdjs-api/blob/master/AMD.md#defineamd-property-) 是否存在。
+
 
 ### 使用 define 定义模块
 
@@ -268,7 +270,7 @@ define('b', function (require) {
 
 回到问题1: 是不是模块需要在依赖都初始化完后再进行初始化呢？答案显然是否定的。更进一步的思考，我们可以得出一个似乎正确的描述：模块需要在其`装载时依赖`都初始化完后再进行初始化。
 
-题外话，对于循环依赖，只要依赖环中任何一条边是`运行时依赖`，这个环理论上就是活的。如果全部边都是`装载时依赖`，这个环就是死的。
+题外话，对于循环依赖，只要依赖环中任何一条边是`运行时依赖`，这个环理论上就是活的。如果全部边都是`装载时依赖`，这个环就是死的。RequireJS 的网站上也有说到[解决循环依赖的方法](http://requirejs.org/docs/api.html#circular)。
 
 之前有说到，依赖声明有两种方式。对于 dependencies 参数中声明的依赖，怎么算呢？下面是之前的例子另外一种可能的形式，纯为了说明问题构建：
 
@@ -651,6 +653,9 @@ define('css', {
     }
 });
 ```
+
+题外话，`AMD` 的设计中并没有提供模块或资源卸载的 API，所以在应用程序设计之初就要考虑并规避可能产生的问题。比如加载的 CSS 资源是没有办法通过 `AMD` 的途径卸载的，所以需要避免不同的 CSS 之间通过前后关系进行优先级管理。
+
 
 #### resource ID normalize
 
