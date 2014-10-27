@@ -52,7 +52,7 @@ define(
 
 举个例子：在 namespace 模式下我们可能将一些 util function 通过 method 方式暴露，在 `AMD` 模块划分时，应该拆分成多个模块。
 
-```
+```javascript
 // good: 分成多个模块
 define(
     function () {
@@ -76,6 +76,7 @@ define(
         };
     }
 );
+```
 
 
 #### 在 factory 中使用 require 引用依赖模块，不要写 dependencies 参数
