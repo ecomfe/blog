@@ -1,12 +1,12 @@
-# name: FEX 百度 Web 前端研发部
-# url: http://fex.baidu.com
+# name: Baidu EFE
+# url: http://efe.baidu.com
 source:      .
 destination: ./_site
 plugins:     ./_plugins
 lsi:      false
 safe:     false
 pygments: true
-markdown: redcarpet
+markdown: kramdown
 permalink: /:year/:month/:title
 paginate: 12
 paginate_path: "articles/page:num"
