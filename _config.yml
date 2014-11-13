@@ -20,6 +20,6 @@ redcarpet:
 
 kramdown:
   input: GFM
+  use_coderay: true
 
-site:
-  url: http://justineo.github.io/blog
+url: http://justineo.github.io/blog
