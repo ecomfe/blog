@@ -16,6 +16,5 @@ post_defaults:
 #   extensions: ["tables", "autolink", "footnotes"]
 
 kramdown:
-  input: GFM
   use_coderay: true
   coderay_line_numbers: nil
