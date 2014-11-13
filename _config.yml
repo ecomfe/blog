@@ -14,7 +14,3 @@ post_defaults:
 
 # redcarpet:
 #   extensions: ["tables", "autolink", "footnotes"]
-
-kramdown:
-  use_coderay: true
-  coderay_line_numbers: nil
