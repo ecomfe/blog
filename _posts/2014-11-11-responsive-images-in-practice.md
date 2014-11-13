@@ -4,7 +4,7 @@ title: 实战响应式图片
 author: Justineo
 ---
 
-原文地址：[http://alistapart.com/article/responsive-images-in-practice](http://alistapart.com/article/responsive-images-in-practice)]
+原文地址：[http://alistapart.com/article/responsive-images-in-practice](http://alistapart.com/article/responsive-images-in-practice)
 作者：[Eric Portis](http://alistapart.com/author/eportis)
 
 > 魔鬼因一切我们享受的东西而惩罚我们。
