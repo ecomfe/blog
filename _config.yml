@@ -1,13 +1,10 @@
 # name: Baidu EFE
 # url: http://efe.baidu.com
-source:      .
 destination: ./_site
 plugins:     ./_plugins
-lsi:      false
-safe:     false
-markdown: redcarpet
+markdown: kramdown
 highlighter: pygments
-permalink: /:year/:month/:title
+permalink: /:title
 paginate: 12
 paginate_path: "articles/page:num"
 encoding: utf-8
@@ -15,9 +12,10 @@ encoding: utf-8
 post_defaults:
   layout: post
 
-redcarpet:
-  extensions: ["tables", "autolink", "footnotes"]
+# redcarpet:
+#   extensions: ["tables", "autolink", "footnotes"]
 
-# kramdown:
-#   input: GFM
-#   use_coderay: true
+kramdown:
+  input: GFM
+  use_coderay: true
+  coderay_line_numbers: nil
