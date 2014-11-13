@@ -6,7 +6,7 @@
 body {
   font-family: 'Avenir Next', 'Segoe UI', Helvetica, 'Lantinghei SC', 'Microsoft YaHei', sans-serif;
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.7;
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: white;
@@ -248,7 +248,8 @@ code, tt {
   white-space: nowrap;
   border: 1px solid #eaeaea;
   background-color: #f8f8f8;
-  border-radius: 3px; }
+  border-radius: 3px;
+  font-family: 'Courier New', monospace; }
 
 pre code {
   margin: 0;
