@@ -7,7 +7,7 @@ page_id: index
 <ol>
   {% for post in site.posts %}
     <li>
-      <a href="/blog/{{ post.url }}/">{{ post.title | escape_html }}</a>
+      <a href="{{ site.url }}{{ post.url }}/">{{ post.title | escape_html }}</a>
       <time>{{ post.date | date_to_string }}</time>
     </li>
   {% endfor %}
