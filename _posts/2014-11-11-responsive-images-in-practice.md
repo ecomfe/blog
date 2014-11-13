@@ -5,6 +5,7 @@ author: Justineo
 ---
 
 原文地址：[http://alistapart.com/article/responsive-images-in-practice](http://alistapart.com/article/responsive-images-in-practice)
+
 作者：[Eric Portis](http://alistapart.com/author/eportis)
 
 > 魔鬼因一切我们享受的东西而惩罚我们。
@@ -100,9 +101,10 @@ x 16px default font-size
 ## 第一遍：用 `srcset` 和 `sizes` 缩放图片
 
 > Teatherball with a tennis ball for his shoelaces
+>
 > Naturally adapt to have more than two faces
-
-—[Kool AD, Dum Diary](http://rapgenius.com/Kool-ad-dum-diary-lyrics#note-2535201)[^koolad]
+>
+>—[Kool AD, Dum Diary](http://rapgenius.com/Kool-ad-dum-diary-lyrics#note-2535201)[^koolad]
 
 [^koolad]: Kool AD 是美国的一位音乐人，引用部分是歌词，就不进行翻译了（Rap 也不是很好翻译）。
 
