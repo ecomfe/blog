@@ -57,7 +57,7 @@ author: Justineo
 
 首先：整块拼布。要保证图片总是能清晰显示，我们需要知道它们在布局中可能的最大尺寸。下面是相关的 CSS 代码：
 
-```css
+~~~~ css
 * {
 	box-sizing: border-box;
 }
@@ -72,7 +72,7 @@ img {
 	display: block;
 	width: 100%;
 }
-```
+~~~~
 
 我们可以用 `figure` 的 `max-width` 减去其 `padding`，然后将 em 单位转换为像素，计算出 `img` 可能的最大显示宽度：
 
