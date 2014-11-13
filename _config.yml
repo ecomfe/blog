@@ -1,10 +1,7 @@
 # name: Baidu EFE
 # url: http://efe.baidu.com
-source:      .
 destination: ./_site
 plugins:     ./_plugins
-lsi:      false
-safe:     false
 markdown: kramdown
 highlighter: pygments
 permalink: /:title
@@ -20,4 +17,3 @@ post_defaults:
 
 kramdown:
   input: GFM
-  use_coderay: true
