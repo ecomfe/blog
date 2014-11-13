@@ -17,3 +17,6 @@ post_defaults:
 
 redcarpet:
   extensions: ["tables", "autolink"]
+
+kramdown:
+  input: GFM

@@ -84,7 +84,7 @@ x 16px default font-size
 
 或者我们可以作个弊，把窗口调得足够大，然后偷瞄一眼开发工具：
 
-![Chrome 的开发工具显示元素宽度为 620px。](http://alistapart.com/d/407/eric-portis-images-oct/box-model.png)
+![Chrome 的开发工具显示元素宽度为 620px。](/img/responsive-images-in-practice/box-model.png)
 
 （我更倾向于这第二种方法。）
 
@@ -203,7 +203,7 @@ sizes="(min-width: 41.25em) 41.25em,
 
 我们页面的数据量现在根据浏览器条件而（华丽丽地！）不同。它是变化的，所以我们无法用一个单一的数字来呈现。我在 Chrome 中反复重新加载页面，然后根据不同视口宽度范围的不同数据量画了一个图表：
 
-![一幅页面数据量和窗口宽度关系的图表。顶部有一条平线，而下方有一条阶梯式的曲线。](http://alistapart.com/d/407/eric-portis-images-oct/first-pass.svg)
+![一幅页面数据量和窗口宽度关系的图表。顶部有一条平线，而下方有一条阶梯式的曲线。](/img/responsive-images-in-practice/first-pass.svg)
  
 顶部那条平的灰色线条代表了采用既有技术的数据量 3.5MB。粗的（1x 屏幕）和细的（2x）绿线代表我们采用 `srcset` 和 `sized` 后的页面在每 320px 到 1280px 之间每个视口宽度下的数据量。
  
@@ -227,7 +227,7 @@ sizes="(min-width: 41.25em) 41.25em,
 
 如果我们可以在手机上“放大”，展现一个更贴近、更高的裁切图，那就好了。
 
-![一段动画演示，展现了细节图在窄屏上变得多小，而在呈现另一种裁切方式时能得到多少更丰富的细节。](http://alistapart.com/d/407/eric-portis-images-oct/art-direction.gif)
+![一段动画演示，展现了细节图在窄屏上变得多小，而在呈现另一种裁切方式时能得到多少更丰富的细节。](/img/responsive-images-in-practice/art-direction.gif)
 
 这类工作——剪裁图片*内容*来适应特定环境——被称为“[艺术指导](http://usecases.responsiveimages.org/#art-direction)”。任何时候我们裁切或是修改图片来适应一个断点（而非简单地缩放整个东西），都是一种艺术指导。
 
@@ -273,7 +273,7 @@ sizes="(min-width: 41.25em) 41.25em,
 
 [这是我们的疯狂拼布页面在完整运用了这种模式之后的样子](http://alistapart.com/d/407/demo/second-pass.html)。记住，我们采用 `picture` 的目标是给小屏用户提供更多（且更*有用*）的像素，现在再来看看性能如何：
 
-![另一幅展示页面数据量和窗口宽度关系的图表。](http://alistapart.com/d/407/eric-portis-images-oct/second-pass.svg)
+![另一幅展示页面数据量和窗口宽度关系的图表。](/img/responsive-images-in-practice/second-pass.svg)
  
 还可以嘛！我们为 1x 屏幕发送了更多字节的数据。但是由于一些[和我们源图片尺寸有关](http://blog.cloudfour.com/how-do-you-pick-responsive-images-breakpoints/)的复杂原因，我们实际上还扩大了 2x 屏节省数据量的范围。在我们第一遍的方法中到 2x 屏的 480px 宽处就不再有节省了，但在第二遍之后，则延续到了 700px 处。
 
@@ -333,7 +333,7 @@ Web 的 25 年历史都由两种位图格式统治：JPEG 和 GIF。PNG 经过[�
 
 虽然话是这么说，[还是让我们看一下 WebP 能为我们的拼布做些什么](http://alistapart.com/d/407/demo/third-pass.html)。
 
-![第三幅展示页面数据量和窗口宽度关系的图表。](http://alistapart.com/d/407/eric-portis-images-oct/third-pass.svg)
+![第三幅展示页面数据量和窗口宽度关系的图表。](/img/responsive-images-in-practice/third-pass.svg)
 
 在我们目前的成果上再节省出 25%–30% 数据量——且不仅在低端，而是覆盖全部情况——绝对不可忽视。我在这里用的方法也不是很严谨；你那边的 WebP 性能可能有所不同。我想说的是：相比现有的 JPEG/GIF/PNG，带来显著收益的新格式已经来了，而且还会有更多。`picture` 和 `source type` 降低了门槛，为以后持久的图片格式上的创新铺平了道路。
  
