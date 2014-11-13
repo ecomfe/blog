@@ -20,3 +20,6 @@ redcarpet:
 
 kramdown:
   input: GFM
+
+site:
+  url: http://justineo.github.io/blog
