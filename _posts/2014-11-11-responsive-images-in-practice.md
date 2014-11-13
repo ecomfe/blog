@@ -44,7 +44,7 @@ author: Justineo
 
 > 我想我不那么在意我老了，相比我又胖又老的话。
 >
-> —[本杰明·富兰克林](http://thinkexist.com/quotation/i_guess_i_don-t_so_much_mind_being_old-as_i_mind/200747.html)（还是[彼得•加布里埃尔](http://www.tejvan.co.uk/funny/funny_quotes_old_age/view/index.html)来着？）
+> —[本杰明·富兰克林](http://thinkexist.com/quotation/i_guess_i_don-t_so_much_mind_being_old-as_i_mind/200747.html)（还是[彼得·加布里埃尔](http://www.tejvan.co.uk/funny/funny_quotes_old_age/view/index.html)来着？）
 
 我们把主角定为[一个关于疯狂拼布的小网页](http://alistapart.com/d/407/demo/status-quo.html)[^quilts]。这是一个简单的响应式页面。这个页面除了主要的内容——巨大的（拼布！）图片——以外没太多别的东西了。我们想既展示每块拼布的整体设计又展示尽可能复杂的细节。那么，我们给每块拼布呈现两幅图片：
 
@@ -59,18 +59,18 @@ author: Justineo
 
 ```css
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 body {
-	font-size: 1.25em;
+    font-size: 1.25em;
 }
 figure {
-	padding: 0 1em;
-	max-width: 33em;
+    padding: 0 1em;
+    max-width: 33em;
 }
 img { 
-	display: block;
-	width: 100%;
+    display: block;
+    width: 100%;
 }
 ```
 
@@ -114,19 +114,19 @@ x 16px default font-size
 
 ```html
 <img
-	src="quilt_2-detail.jpg"
-	alt="Detail of the above quilt, highlighting the embroidery and exotic stitchwork." />
+    src="quilt_2-detail.jpg"
+    alt="Detail of the above quilt, highlighting the embroidery and exotic stitchwork." />
 ```
 
 `quilt_2-detail.jpg` 宽度为 1920 像素。再为它附带渲染两个小一点的版本，像这样写：
 
 ```html
 <img
-	srcset="quilt_2/detail/large.jpg  1920w, 
-	        quilt_2/detail/medium.jpg  960w,
-	        quilt_2/detail/small.jpg   480w"
-	src="quilt_2/detail/medium.jpg"
-	alt="Detail of the above quilt, highlighting the embroidery and exotic stitchwork.">
+    srcset="quilt_2/detail/large.jpg  1920w, 
+            quilt_2/detail/medium.jpg  960w,
+            quilt_2/detail/small.jpg   480w"
+    src="quilt_2/detail/medium.jpg"
+    alt="Detail of the above quilt, highlighting the embroidery and exotic stitchwork.">
 ```
 
 首先需要注意这个 `img` 仍然有一个 `src`，用来在不支持新语法的浏览器中进行加载。
@@ -177,13 +177,13 @@ sizes="(min-width: 41.25em) 41.25em,
 
 ```html
 <img 
-	srcset="quilt_3/large.jpg  1240w, 
-	        quilt_3/medium.jpg  620w,
-	        quilt_3/small.jpg   310w"
-	sizes="(min-width: 41.25em) 38.75em,
-	       calc(100vw - 2.5em)"
-	src="quilt_3/medium.jpg"
-	alt="A crazy quilt whose irregular fabric scraps are fit into a lattice of diamonds." />
+    srcset="quilt_3/large.jpg  1240w, 
+            quilt_3/medium.jpg  620w,
+            quilt_3/small.jpg   310w"
+    sizes="(min-width: 41.25em) 38.75em,
+           calc(100vw - 2.5em)"
+    src="quilt_3/medium.jpg"
+    alt="A crazy quilt whose irregular fabric scraps are fit into a lattice of diamonds." />
 ```
 
 来看看我们到现在都做了些什么。我们使用 `srcset` 给浏览器提供了大、中、小版本的图片并用 `w` 描述符给出了他们的像素宽度。我们通过 `sizes` 告诉了浏览器它们实际会占多大地方。
@@ -239,20 +239,20 @@ sizes="(min-width: 41.25em) 41.25em,
 
 ```html
 <picture>
-	<!-- 16:9 crop -->
-	<source
-		media="(min-width: 36em)"
-		srcset="quilt_2/detail/large.jpg  1920w,
-		        quilt_2/detail/medium.jpg  960w,
-		        quilt_2/detail/small.jpg   480w" />
-	<!-- square crop -->
-	<source
-		srcset="quilt_2/square/large.jpg  822w,
-		        quilt_2/square/medium.jpg 640w,
-		        quilt_2/square/small.jpg  320w" />
-	<img
-		src="quilt_2/detail/medium.jpg"
-		alt="Detail of the above quilt, highlighting the embroidery and exotic stitchwork." />
+    <!-- 16:9 crop -->
+    <source
+        media="(min-width: 36em)"
+        srcset="quilt_2/detail/large.jpg  1920w,
+                quilt_2/detail/medium.jpg  960w,
+                quilt_2/detail/small.jpg   480w" />
+    <!-- square crop -->
+    <source
+        srcset="quilt_2/square/large.jpg  822w,
+                quilt_2/square/medium.jpg 640w,
+                quilt_2/square/small.jpg  320w" />
+    <img
+        src="quilt_2/detail/medium.jpg"
+        alt="Detail of the above quilt, highlighting the embroidery and exotic stitchwork." />
 </picture>
 ```
 
@@ -262,8 +262,8 @@ sizes="(min-width: 41.25em) 41.25em,
 
 ```html
 <picture>
-	<source media="(orientation: landscape)" srcset="landscape.jpg" />
-	<img src="portrait.jpg" alt="A rad wolf." />
+    <source media="(orientation: landscape)" srcset="landscape.jpg" />
+    <img src="portrait.jpg" alt="A rad wolf." />
 </picture>
 ```
 
@@ -290,8 +290,8 @@ Web 的 25 年历史都由两种位图格式统治：JPEG 和 GIF。PNG 经过[�
 
 ```html
 <picture>
-	<source type="image/svg+xml" srcset="logo.svg" />
-	<img src="logo.png" alt="RadWolf, Inc." />
+    <source type="image/svg+xml" srcset="logo.svg" />
+    <img src="logo.png" alt="RadWolf, Inc." />
 </picture>
 ```
 
@@ -301,31 +301,31 @@ Web 的 25 年历史都由两种位图格式统治：JPEG 和 GIF。PNG 经过[�
 
 ```html
 <picture>
-	<!-- 16:9 crop -->
-	<source
-		type="image/webp"
-		media="(min-width: 36em)"
-		srcset="quilt_2/detail/large.webp  1920w,
-		        quilt_2/detail/medium.webp  960w,
-		        quilt_2/detail/small.webp   480w" />
-	<source
-		media="(min-width: 36em)"
-		srcset="quilt_2/detail/large.jpg  1920w,
-		        quilt_2/detail/medium.jpg  960w,
-		        quilt_2/detail/small.jpg   480w" />
-	<!-- square crop -->
-	<source
-		type="image/webp"
-		srcset="quilt_2/square/large.webp   822w,
-		        quilt_2/square/medium.webp  640w,
-		        quilt_2/square/small.webp   320w" />
-	<source
-		srcset="quilt_2/square/large.jpg   822w,
-		        quilt_2/square/medium.jpg  640w,
-		        quilt_2/square/small.jpg   320w" />
-	<img
-		src="quilt_2/detail/medium.jpg"
-		alt="Detail of the above quilt, highlighting the embroidery and exotic stitchwork." />
+    <!-- 16:9 crop -->
+    <source
+        type="image/webp"
+        media="(min-width: 36em)"
+        srcset="quilt_2/detail/large.webp  1920w,
+                quilt_2/detail/medium.webp  960w,
+                quilt_2/detail/small.webp   480w" />
+    <source
+        media="(min-width: 36em)"
+        srcset="quilt_2/detail/large.jpg  1920w,
+                quilt_2/detail/medium.jpg  960w,
+                quilt_2/detail/small.jpg   480w" />
+    <!-- square crop -->
+    <source
+        type="image/webp"
+        srcset="quilt_2/square/large.webp   822w,
+                quilt_2/square/medium.webp  640w,
+                quilt_2/square/small.webp   320w" />
+    <source
+        srcset="quilt_2/square/large.jpg   822w,
+                quilt_2/square/medium.jpg  640w,
+                quilt_2/square/small.jpg   320w" />
+    <img
+        src="quilt_2/detail/medium.jpg"
+        alt="Detail of the above quilt, highlighting the embroidery and exotic stitchwork." />
 </picture>
 ```
 
@@ -344,7 +344,7 @@ Web 的 25 年历史都由两种位图格式统治：JPEG 和 GIF。PNG 经过[�
 
 ## [`size` the day (享受现在)](http://meninblazers.wikispaces.com/Size+The+Day)[^sizetheday]
 
-[^sizetheday]: 「size the day」是著名足球教练博拉•米卢蒂诺维奇曾经的一个口误，他本想说的是「seize the day」（拉丁文说法 carpe diem，就是享受现在的意思）。这里原文是开了个小玩笑，正好对上文中所讲的 `sizes` 标签，意思是应当现在就开始享受新特性带来的便利。
+[^sizetheday]: 「size the day」是著名足球教练博拉·米卢蒂诺维奇曾经的一个口误，他本想说的是「seize the day」（拉丁文说法 carpe diem，就是享受现在的意思）。这里原文是开了个小玩笑，正好对上文中所讲的 `sizes` 标签，意思是应当现在就开始享受新特性带来的便利。
 
 > 原木雕后才成器；
 > [...]
