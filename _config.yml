@@ -5,8 +5,8 @@ destination: ./_site
 plugins:     ./_plugins
 lsi:      false
 safe:     false
-pygments: true
 markdown: kramdown
+highlighter: pygments
 permalink: /:year/:month/:title
 paginate: 12
 paginate_path: "articles/page:num"
