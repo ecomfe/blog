@@ -5,7 +5,7 @@ destination: ./_site
 plugins:     ./_plugins
 lsi:      false
 safe:     false
-markdown: kramdown
+markdown: redcarpet
 highlighter: pygments
 permalink: /:year/:month/:title
 paginate: 12
@@ -16,10 +16,10 @@ post_defaults:
   layout: post
 
 redcarpet:
-  extensions: ["tables", "autolink"]
+  extensions: ["tables", "autolink", "footnotes"]
 
-kramdown:
-  input: GFM
-  use_coderay: true
+# kramdown:
+#   input: GFM
+#   use_coderay: true
 
 url: http://justineo.github.io/blog
