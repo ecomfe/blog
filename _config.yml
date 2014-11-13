@@ -21,5 +21,3 @@ redcarpet:
 kramdown:
   input: GFM
   use_coderay: true
-
-url: http://justineo.github.io/blog
