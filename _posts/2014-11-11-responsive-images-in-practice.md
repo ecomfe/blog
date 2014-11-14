@@ -279,7 +279,7 @@ sizes="(min-width: 41.25em) 41.25em,
 
 ![另一幅展示页面数据量和窗口宽度关系的图表。](/blog/images/responsive-images-in-practice/second-pass.svg)
  
-还可以嘛！我们为 1x 屏幕发送了更多字节的数据。但是由于一些[和我们源图片尺寸有关](http://blog.cloudfour.com/how-do-you-pick-responsive-images-breakpoints/)的复杂原因，我们实际上还扩大了 2x 屏节省数据量的范围。在我们第一遍的方法中到 2x 屏的 480px 宽处就不再有节省了，但在第二遍之后，则延续到了 700px 处。
+还可以嘛！我们为 1x 屏幕发送了更多字节的数据。但是由于一些[和源图片尺寸有关](http://blog.cloudfour.com/how-do-you-pick-responsive-images-breakpoints/)的复杂原因，我们实际上还扩大了 2x 屏节省数据量的范围。在我们第一遍的方法中到 2x 屏的 480px 宽处就不再有节省了，但在第二遍之后，则延续到了 700px 处。
 
 我们的页面现在小一些的设备上加载更快了，*同时*看上去也更好了。而且我们还没弄完呢。
 
