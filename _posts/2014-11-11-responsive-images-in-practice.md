@@ -223,7 +223,7 @@ sizes="(min-width: 41.25em) 41.25em,
 > 懒汉用 `srcset`，疯子™用 `picture`
 >
 > —[Mat Marquis](http://ircbot.responsiveimages.org/bot/log/respimg/2014-06-24#T78853)
-{: title="“一个大量饮用 Squishy 的人必然会做些疯狂的事情。” —巴特·辛普森"}
+{: title="“Squishy 喝多了肯定会发神经的。” —巴特·辛普森"}
 
 那么，对于仅仅是需要缩放的图片，我们在 `srcset` 中列出源图片及其像素宽度，用 `sizes` 来让浏览器知晓 `img` 会以什么宽度显示，同时释放我们那[愚蠢的控制欲](http://alistapart.com/article/dao#section2)。但是！有的时候我们会希望通过除了缩放之外的方式来进行图片的自适应。这个时候，我们就需要夺回一些我们选择源图片的控制权。开始说 `picture`。
 
