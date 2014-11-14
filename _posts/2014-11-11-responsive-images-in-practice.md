@@ -8,11 +8,6 @@ author: Justineo
 
 作者：[Eric Portis](http://alistapart.com/author/eportis)
 
-# 目录
-{:.no_toc}
-
-* 目录内容
-{:toc}
 
 > 魔鬼因一切我们享受的东西而惩罚我们。
 >
