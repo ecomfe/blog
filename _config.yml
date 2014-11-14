@@ -16,3 +16,4 @@ post_defaults:
 
 kramdown:
   input: GFM
+  auto_ids: false
