@@ -3,7 +3,6 @@
 destination: ./_site
 plugins:     ./_plugins
 markdown: kramdown
-highlighter: pygments
 permalink: /:title
 paginate: 12
 paginate_path: "articles/page:num"
