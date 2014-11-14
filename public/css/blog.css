@@ -250,7 +250,7 @@ code, tt {
   border: 1px solid #eaeaea;
   background-color: #f8f8f8;
   border-radius: 3px;
-  font-family: 'Courier New', monospace; }
+  font-family: Consolas, 'Courier New', monospace; }
 
 pre code {
   margin: 0;
@@ -258,15 +258,6 @@ pre code {
   white-space: pre;
   border: none;
   background: transparent; }
-
-.highlight pre {
-  background-color: #f8f8f8;
-  border: 1px solid #cccccc;
-  font-size: 13px;
-  line-height: 19px;
-  overflow: auto;
-  padding: 6px 10px;
-  border-radius: 3px; }
 
 pre {
   background-color: #f8f8f8;
