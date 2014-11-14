@@ -16,3 +16,4 @@ post_defaults:
 
 kramdown:
   input: GFM
+  transliterated_header_ids: true

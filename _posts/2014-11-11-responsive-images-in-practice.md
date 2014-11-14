@@ -8,6 +8,8 @@ author: Justineo
 
 作者：[Eric Portis](http://alistapart.com/author/eportis)
 
+{:toc}
+
 > 魔鬼因一切我们享受的东西而惩罚我们。
 >
 > —阿尔伯特·爱因斯坦
