@@ -182,20 +182,12 @@ table {
 img {
   max-width: 100%; }
 
-em {
-  text-decoration: underline;
-  font-style: normal;
-}
-
 @supports ( -webkit-text-emphasis: filled circle ) {
   em {
       -webkit-text-emphasis: filled circle;
       -webkit-text-emphasis-position: under;
-      text-decoration: none; }
+      font-style: normal; }
 }
-
-
-
 
 code, tt {
   margin: 0 2px;
