@@ -184,6 +184,7 @@ img {
 
 em {
   text-decoration: underline;
+  font-style: normal;
 }
 
 @supports ( -webkit-text-emphasis: filled circle ) {
