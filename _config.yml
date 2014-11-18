@@ -1,13 +1,9 @@
-# name: FEX 百度 Web 前端研发部
-# url: http://fex.baidu.com
-source:      .
+# name: Baidu EFE
+# url: http://efe.baidu.com
 destination: ./_site
 plugins:     ./_plugins
-lsi:      false
-safe:     false
-pygments: true
-markdown: redcarpet
-permalink: /:year/:month/:title
+markdown: kramdown
+permalink: /:title
 paginate: 12
 paginate_path: "articles/page:num"
 encoding: utf-8
@@ -15,5 +11,9 @@ encoding: utf-8
 post_defaults:
   layout: post
 
-redcarpet:
-  extensions: ["tables", "autolink"]
+# redcarpet:
+#   extensions: ["tables", "autolink", "footnotes"]
+
+kramdown:
+  input: GFM
+  auto_ids: false
