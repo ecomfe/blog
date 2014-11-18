@@ -184,11 +184,13 @@ img {
 
 em {
   text-decoration: underline;
+}
 
-  @supports ( -webkit-text-emphasis: filled circle ) {
-    -webkit-text-emphasis: filled circle;
-    -webkit-text-emphasis-position: under;
-    text-decoration: none; }
+@supports ( -webkit-text-emphasis: filled circle ) {
+  em {
+      -webkit-text-emphasis: filled circle;
+      -webkit-text-emphasis-position: under;
+      text-decoration: none; }
 }
 
 
