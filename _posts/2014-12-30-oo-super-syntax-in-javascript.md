@@ -5,8 +5,6 @@ author: exodia
 shortname: empty
 ---
 
-#{{page.title}}
-
 在很多 OO 的语言中，都提供了某种便捷的语法糖去调用基类中被子类覆盖的方法，比如在 Java 中：
 
 ```java
