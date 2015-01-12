@@ -38,7 +38,7 @@ MVC模式已经被其它语言所接受，比如Java，Ruby和Python。但是对
 
 ![Model-View-Controller](../images/isomorphic/mvc.png)
 
-传统的Model-View-Controller模式（译注：为了与后续的Presenter, ViewModel保持一直，Model, View, Controller都不做翻译）假定View是持续的，同时，Controller是可热插拔的。比如说一个View对于是否登陆会对应不同的Controller。在一个较高的层次上而言，MVC并不关注View是如何被渲染（如具体是采用何种模版引擎）。
+传统的Model-View-Controller模式（译注：为了与后续的Presenter, ViewModel保持一致，Model, View, Controller都不做翻译）假定View是持续的，同时，Controller是可热插拔的。比如说一个View对于是否登陆会对应不同的Controller。在一个较高的层次上而言，MVC并不关注View是如何被渲染（如具体是采用何种模版引擎）。
 
 通过View是持续的及View定义用户交互来看，传统的MVC是对前端开发十分有利的模式。稍后我们会看到现实中，[Backbone.js](http://backbonejs.org/)实现的一个稍微改动的MVC模式。
 
