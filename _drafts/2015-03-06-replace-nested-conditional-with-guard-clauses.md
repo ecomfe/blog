@@ -2,13 +2,14 @@
 layout: post
 title: 嵌套条件的重构
 author: chris
-shortname: empty
+shortname: 重构嵌套条件
 ---
 
 嵌套的条件判断会导致方法的正常执行路径不明晰，使代码可读性下降。本文提供一种对嵌套条件重构的方法，能有效提升代码的可读性。
 
 
 原文：http://sourcemaking.com/refactoring/replace-nested-conditional-with-guard-clauses
+
 说明：本译文中所有 `Guard Clauses` 一律使用 `GC` 代替，不作翻译。
 
 A method has conditional behavior that does not make clear the normal path of execution.
@@ -60,8 +61,7 @@ function getPayAmount() {
 }
 ```
 
-## Motivation
-## 缘起
+## Motivation 缘起
 
 I often find that conditional expressions come in two forms. The first form is a check whether either course is part of the normal behavior. The second form is a situation in which one answer from the conditional indicates normal behavior and the other indicates an unusual condition.
 条件表达式有两种形式。一种是检查是否正常行为。另一种是先响应正常的行为，其余的都是异常状况。
@@ -77,8 +77,7 @@ I often find I use Replace Nested Conditional with Guard Clauses when I'm workin
 在与遵循方法只有一个入口一个出口的程序员合作时，我通常要替换他的嵌套条件为 `GC` 。一个入口是由现代语言强制要求的，而一个出口则不是一条有用规则。关键是要清晰：如果一个出口能使方法更清晰，用之，否则不用。
 
 
-## Mechanics
-## 过程
+## Mechanics 过程
 
 - For each check put in the guard clause.
     > The guard clause either returns, or throws an exception.
@@ -90,8 +89,7 @@ I often find I use Replace Nested Conditional with Guard Clauses when I'm workin
     > 如果所有 `GC` 产出同样的结果，合并条件表达式。
 
 
-## Example
-## 示例
+## Example 示例
 
 
 Imagine a run of a payroll system in which you have special rules for dead, separated, and retired employees. Such cases are unusual, but they do happen from time to time.
@@ -225,8 +223,7 @@ function getPayAmount() {
 Nested conditional code often is written by programmers who are taught to have one exit point from a method. I've found that is a too simplistic rule. When I have no further interest in a method, I signal my lack of interest by getting out. Directing the reader to look at an empty else block only gets in the way of comprehension.
 遵循方法只有一个出口的程序员常常写出嵌套的条件代码，我觉得这规则很傻很天真。当我对方法后面不感兴趣时，会选择马上退出。 空 `else` 块只会令人费解。
 
-## Example: Reversing the Conditions
-## 示例：条件反转
+## Example: Reversing the Conditions 示例：条件反转
 
 In reviewing the manuscript of this book, Joshua Kerievsky pointed out that you often do Replace Nested Conditional with Guard Clauses by reversing the conditional expressions. He kindly came up with an example to save further taxing of my imagination:
 在评审本书稿时，`Joshua Kerievsky` 指出，还可以用反转条件表达式实现替换 `GC`。他的示例让我茅塞顿开：
