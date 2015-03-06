@@ -80,12 +80,19 @@ I often find I use Replace Nested Conditional with Guard Clauses when I'm workin
 ## Mechanics 过程
 
 - For each check put in the guard clause.
+
     > The guard clause either returns, or throws an exception.
+
 - Compile and test after each check is replaced with a guard clause.
+
     > If all guard clauses yield the same result, use Consolidate Conditional Expressions.
+
 - 把每个检查放到 `GC`。
+
     > `GC` 要么返回，要么抛异常。
+
 - 对每个替换为 `GC` 的检查作编译和测试。
+
     > 如果所有 `GC` 产出同样的结果，合并条件表达式。
 
 
@@ -262,7 +269,7 @@ function getAdjustedCapital() {
 ```
 
 Because the next conditional is a bit more complicated, I can reverse it in two steps. First I add a not:
-由于下个条件复杂点，要分两步来反转。首先加非：
+由于下个条件复杂点，要分两步来反转。首先取反：
 
 ```javascript
 function getAdjustedCapital() {
@@ -283,7 +290,7 @@ function getAdjustedCapital() {
 ```
 
 Leaving nots in a conditional like that twists my mind around at a painful angle, so I simplify it as follows:
-这样加非的条件不易理解，所以简化如下：
+这样取反的条件不易理解，所以简化如下：
 
 ```javascript
 function getAdjustedCapital() {
